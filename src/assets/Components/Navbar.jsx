@@ -1,10 +1,11 @@
 import "./Navbar.css";
+import logoKasa from "../Images/LOGO.svg";
 
 function Navbar() {
   return (
     <nav className="navbar">
       <div className="navbar_logo">
-        <img src="/public/Images/LOGO.svg" alt="Logo de Kasa" />{" "}
+        <img src={logoKasa} alt="Logo de Kasa" />
       </div>
       <div>Accueil</div>
       <div>A propos</div>
