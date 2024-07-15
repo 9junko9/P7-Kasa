@@ -7,7 +7,9 @@ function Banner() {
       <img src={imgbanner} alt="montagnes" className="bannerImg" />
       <div className="mask"></div>
 
-      <h1>Chez vous, partout et ailleurs</h1>
+      <h1>
+        Chez vous, <span className="break"> partout et ailleurs</span>
+      </h1>
     </div>
   );
 }

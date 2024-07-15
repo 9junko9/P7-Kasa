@@ -1,6 +1,6 @@
 .banner {
   margin: auto;
-  width: 100%;
+  max-width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -8,15 +8,16 @@
   border-radius: 1.5625rem;
   background: #f6f6f6;
   height: 223px;
-
   margin-bottom: 30px;
 }
+
 .bannerImg {
   border-radius: 1.5625rem;
   object-fit: cover;
   width: 100%;
   height: 100%;
 }
+
 h1 {
   color: white;
   position: absolute;
@@ -26,14 +27,67 @@ h1 {
   justify-content: center;
   align-items: center;
   font-family: Montserrat;
-  font-size: 3rem;
+  font-size: 48px;
 }
+
 .mask {
   position: absolute;
   height: 100%;
   width: 100%;
   border-radius: 1.5625rem;
-  opacity: 0.3;
+  opacity: 0.6;
   background: #000;
-  mix-blend-mode: darken;
+}
+
+/******** Media Queries*****/
+
+@media screen and (max-width: 1024px) {
+  .banner {
+    height: 200px;
+  }
+  h1 {
+    font-size: 2.35rem;
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .banner {
+    height: 111px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+  }
+  .bannerImg {
+    border-radius: 10px;
+  }
+  h1 {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    font-size: 24px;
+    margin-left: 16px;
+  }
+  .mask {
+    border-radius: 10px;
+  }
+  .break {
+    display: block;
+  }
+}
+
+@media screen and (max-width: 375px) {
+  h1 {
+    font-size: 1.7rem;
+    font-weight: 300;
+  }
+}
+@media screen and (min-width: 769px) {
+  h1 {
+    /* Pour ajouter un espace après la virgule dans le texte */
+    white-space: pre-wrap; /* Permet à l'espace ajouté d'être respecté */
+  }
+
+  .break {
+    /* Assure que le style sera appliqué au span contenant "partout et ailleurs" */
+    display: inline; /* Met en œuvre le style inline dans la ligne */
+  }
 }

@@ -1,3 +1,4 @@
+import React from "react";
 import "./Navbar.css";
 import logoKasa from "../Images/LOGO.svg";
 
@@ -7,8 +8,10 @@ function Navbar() {
       <div className="navbar_logo">
         <img src={logoKasa} alt="Logo de Kasa" />
       </div>
-      <div>Accueil</div>
-      <div>A propos</div>
+      <div className="navbar_links">
+        <a href="/">Accueil</a>
+        <a href="/a-propos">A propos</a>
+      </div>
     </nav>
   );
 }
