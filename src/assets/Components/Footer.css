@@ -1,0 +1,21 @@
+.footer {
+  background-color: black;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  height: 22%;
+  margin-top: 50px;
+}
+.footer_logo {
+  margin-bottom: 23px;
+  margin-top: 66px;
+  height: 18.85%;
+}
+.footer_text {
+  margin-top: 29px;
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    margin-top: 27px;
+  }
+}
