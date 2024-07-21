@@ -1,4 +1,4 @@
-import "./Thumb.css";
+import "../Components/Thumb.css";
 import Apartment from "./Apartment";
 
 function Thumb() {

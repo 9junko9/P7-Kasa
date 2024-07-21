@@ -1,7 +1,7 @@
-import Navbar from "./assets/Components/Navbar";
-import Banner from "./assets/Components/Banner";
-import Thumb from "./assets/Components/Thumb";
-import Footer from "./assets/Components/Footer";
+import Navbar from "./Components/Navbar";
+import Banner from "./Components/Banner";
+import Thumb from "./Components/Thumb";
+import Footer from "./Components/Footer";
 import locations from "./data/locations.json";
 import "./App.css";
 

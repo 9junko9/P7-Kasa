@@ -28,7 +28,10 @@
   color: inherit;
 }
 
-.navbar_links a:hover {
+.navbar a:hover {
+  text-decoration: underline;
+}
+.navbar a:active {
   text-decoration: underline;
 }
 
