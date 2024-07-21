@@ -1,5 +1,7 @@
+@import "../sass/variables.scss";
+
 .ThumbGrid {
-  background-color: #f6f6f6;
+  background-color: $grid-background-grey;
   min-height: 50vh;
   border-radius: 25px;
   display: flex;
@@ -11,7 +13,7 @@
 @media screen and (max-width: 768px) {
   .ThumbGrid {
     justify-content: center;
-    background-color: white;
+    background-color: $grid-background-light;
     padding: 0;
   }
 }

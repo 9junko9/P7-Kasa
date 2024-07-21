@@ -1,3 +1,5 @@
+@import "../sass/variables.scss";
+
 .banner {
   margin: auto;
   max-width: 100%;
@@ -6,7 +8,7 @@
   justify-content: center;
   position: relative;
   border-radius: 1.5625rem;
-  background: #f6f6f6;
+  background: $grid-background-light;
   height: 223px;
   margin-bottom: 43px;
 }
@@ -19,7 +21,7 @@
 }
 
 h1 {
-  color: white;
+  color: $color-secondary;
   position: absolute;
   height: 100%;
   width: 100%;

@@ -8,31 +8,29 @@
   cursor: pointer;
   margin-bottom: 50px;
   justify-content: space-between;
+  & img {
+    height: 68px;
+  }
 }
 
 .navbar_logo {
   margin-right: auto;
 }
 
-.navbar img {
-  height: 68px;
-}
-
 .navbar_links {
   display: flex;
   gap: 57px;
-}
+  & a {
+    text-decoration: none;
+    color: inherit;
+  }
 
-.navbar_links a {
-  text-decoration: none;
-  color: inherit;
-}
-
-.navbar a:hover {
-  text-decoration: underline;
-}
-.navbar a:active {
-  text-decoration: underline;
+  & a:hover {
+    text-decoration: underline;
+  }
+  & a.active {
+    text-decoration: underline;
+  }
 }
 
 @media screen and (max-width: 768px) {

@@ -1,6 +1,8 @@
+@import "../sass/variables.scss";
+
 .footer {
-  background-color: black;
-  color: white;
+  background-color: $color-tertiary;
+  color: $color-secondary;
   padding: 20px;
   text-align: center;
   height: 22%;
