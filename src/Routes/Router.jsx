@@ -3,6 +3,7 @@ import Home from "../Pages/Home";
 import ApartmentPage from "../Pages/ApartmentPage";
 import Footer from "../layout/Footer";
 import Navbar from "../layout/Navbar";
+import About from "../Pages/About";
 
 const HeaderFooterLayout = () => {
   return (
@@ -28,7 +29,7 @@ export const router = createBrowserRouter([
 
       {
         path: "/about",
-        element: <h3>A propos</h3>,
+        element: <About />,
       },
       {
         path: "*",
