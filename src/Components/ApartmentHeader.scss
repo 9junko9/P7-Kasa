@@ -1,0 +1,91 @@
+@import "../sass/variables.scss";
+
+.apartment__header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 20px;
+  @media screen and (max-width: 768px) {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .apartment__title {
+    flex-grow: 1;
+  }
+  .apartment__tags {
+    display: flex;
+    gap: 10px;
+    margin-top: 20px;
+    margin-bottom: 24px;
+    span {
+      background-color: $color-primary;
+      color: $color-secondary;
+      border-radius: 10px;
+      font-size: 14px;
+      padding: 4px 10px;
+      font-weight: bold;
+    }
+  }
+  .apartment_host_details {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    margin-left: 20px;
+    text-align: right;
+    @media screen and (max-width: 768px) {
+      flex-direction: row;
+      align-items: center;
+      width: 100%;
+      justify-content: space-between;
+    }
+  }
+
+  h4 {
+    margin-block: 0;
+  }
+}
+.apartment_host {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  margin-bottom: 10px;
+  gap: 10px;
+
+  h4 {
+    margin-left: 20px;
+    font-size: 18px;
+    font-weight: 500;
+    @media screen and (max-width: 768px) {
+      margin-left: 10px;
+      margin-right: auto;
+    }
+  }
+}
+.apartment_host_badge {
+  height: 64px;
+  width: 64px;
+  border-radius: 50%;
+  background-color: $badge;
+  margin-left: 10px;
+  @media screen and (max-width: 768px) {
+    margin-left: 0;
+    margin-right: 10px;
+  }
+}
+.apartment_host_stars {
+  display: flex;
+  gap: 5px;
+  @media screen and (max-width: 768px) {
+    order: -1;
+  }
+  * {
+    font-size: 36px;
+  }
+  .on {
+    color: $color-primary;
+  }
+  .off {
+    color: $stars;
+  }
+}

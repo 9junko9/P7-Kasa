@@ -1,5 +1,6 @@
 import { createBrowserRouter, Outlet } from "react-router-dom";
-import App from "../App";
+import Home from "../Pages/Home";
+import ApartmentPage from "../Pages/ApartmentPage";
 import Footer from "../layout/Footer";
 import Navbar from "../layout/Navbar";
 
@@ -15,20 +16,23 @@ const HeaderFooterLayout = () => {
 export const router = createBrowserRouter([
   {
     element: <HeaderFooterLayout />,
-    errorElement: <h3>404 not found</h3>,
     children: [
       {
         path: "/",
-        element: <App />,
+        element: <Home />,
       },
       {
         path: "/locations",
-        element: <h3>Nos appartements</h3>,
+        element: <ApartmentPage />,
       },
 
       {
         path: "/about",
         element: <h3>A propos</h3>,
+      },
+      {
+        path: "*",
+        element: <h3>404 not found</h3>,
       },
     ],
   },

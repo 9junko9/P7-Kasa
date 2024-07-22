@@ -1,0 +1,20 @@
+@import "../sass/variables.scss";
+
+.apartment-page {
+  color: $color-primary;
+  h2 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-block: 0;
+  }
+  h3 {
+    color: $color-tertiary;
+    font-size: 18px;
+    font-weight: 500;
+  }
+
+  .apartment__description__area {
+    display: flex;
+    gap: 76px;
+  }
+}

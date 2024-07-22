@@ -5,8 +5,11 @@
   color: $color-secondary;
   padding: 20px;
   text-align: center;
-  height: 22%;
-  margin-top: 50px;
+  width: calc(100% + 90px);
+  margin: 0 -45px;
+  box-sizing: border-box;
+  margin-top: 93px;
+  margin-bottom: -10px;
 }
 .footer_logo {
   margin-bottom: 23px;
