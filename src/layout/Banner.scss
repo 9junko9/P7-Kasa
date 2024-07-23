@@ -1,5 +1,9 @@
 @import "../sass/variables.scss";
 
+.banner-wrapper {
+  padding: 0 45px;
+}
+
 .banner {
   margin: auto;
   max-width: 100%;
@@ -41,7 +45,7 @@ h1 {
   background: #000;
 }
 
-/******** Media Queries*****/
+/******** Media Queries *****/
 
 @media screen and (max-width: 1024px) {
   .banner {
@@ -53,14 +57,20 @@ h1 {
 }
 
 @media screen and (max-width: 768px) {
+  .banner-wrapper {
+    padding: 0;
+  }
+
   .banner {
     height: 111px;
     border-radius: 10px;
     margin-bottom: 22px;
   }
+
   .bannerImg {
     border-radius: 10px;
   }
+
   h1 {
     display: flex;
     flex-direction: column;
@@ -68,9 +78,11 @@ h1 {
     font-size: 24px;
     margin-left: 16px;
   }
+
   .mask {
     border-radius: 10px;
   }
+
   .break {
     display: block;
   }
@@ -82,14 +94,13 @@ h1 {
     font-weight: 300;
   }
 }
+
 @media screen and (min-width: 769px) {
   h1 {
-    /* Pour ajouter un espace après la virgule dans le texte */
-    white-space: pre-wrap; /* Permet à l'espace ajouté d'être respecté */
+    white-space: pre-wrap;
   }
 
   .break {
-    /* Assure que le style sera appliqué au span contenant "partout et ailleurs" */
-    display: inline; /* Met en œuvre le style inline dans la ligne */
+    display: inline;
   }
 }

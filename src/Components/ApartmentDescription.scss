@@ -2,6 +2,10 @@
 
 .apartment_description {
   margin-bottom: 30px;
+  padding: 0 45px;
+  @media screen and (max-width: 768px) {
+    padding: 0;
+  }
   p {
     margin-block: 0;
   }
@@ -21,10 +25,14 @@
       font-size: 24px;
       padding-right: 20px;
     }
+    @media screen and (max-width: 768px) {
+      height: 32px;
+    }
   }
   .description_content {
     background-color: $grid-background-grey;
     color: $color-tertiary;
+    font-size: 18px;
     border-radius: 5px;
     position: relative;
     top: -0.3rem;
@@ -32,5 +40,8 @@
     transition: transform 0.3s ease-in-out;
     font-size: 1rem;
     padding-top: 13px;
+    @media screen and (max-width: 768px) {
+      font-size: 12px;
+    }
   }
 }

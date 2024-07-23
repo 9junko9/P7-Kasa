@@ -1,13 +1,15 @@
 import "../Components/Thumb.scss";
-import Apartment from "./Apartment";
+import ApartmentCard from "./Apartment";
 
 function Thumb() {
   return (
-    <div className="ThumbGrid">
-      <Apartment />
-      <Apartment />
-      <Apartment />
-      <Apartment />
+    <div className="ThumbContainer">
+      <div className="ThumbGrid">
+        <ApartmentCard />
+        <ApartmentCard />
+        <ApartmentCard />
+        <ApartmentCard />
+      </div>
     </div>
   );
 }
