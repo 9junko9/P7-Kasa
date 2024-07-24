@@ -1,4 +1,4 @@
-import { ApartmentDescription } from "../Components/ApartmentDescription";
+import { DescriptionPanel } from "../Components/DescriptionPanel";
 import ApartmentBanner from "../Components/ApartmentBanner";
 import "./About.scss";
 
@@ -7,10 +7,10 @@ function About() {
     <>
       <ApartmentBanner />
       <div className="about__container">
-        <ApartmentDescription />
-        <ApartmentDescription />
-        <ApartmentDescription />
-        <ApartmentDescription />
+        <DescriptionPanel />
+        <DescriptionPanel />
+        <DescriptionPanel />
+        <DescriptionPanel />
       </div>
     </>
   );

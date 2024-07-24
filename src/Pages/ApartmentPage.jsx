@@ -1,5 +1,5 @@
 import "./ApartmentPage.scss";
-import { ApartmentDescription } from "../Components/ApartmentDescription";
+import { DescriptionPanel } from "../Components/DescriptionPanel";
 import ApartmentBanner from "../Components/ApartmentBanner";
 import ApartmentHeader from "../Components/ApartmentHeader";
 
@@ -9,8 +9,8 @@ function ApartmentPage() {
       <ApartmentBanner />
       <ApartmentHeader />
       <div className="apartment__description__area">
-        <ApartmentDescription />
-        <ApartmentDescription />
+        <DescriptionPanel />
+        <DescriptionPanel />
       </div>
     </div>
   );

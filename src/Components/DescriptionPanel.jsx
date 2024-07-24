@@ -1,8 +1,8 @@
-import "../Components/ApartmentDescription.scss";
+import "../Components/DescriptionPanel.scss";
 
-export function ApartmentDescription() {
+export function DescriptionPanel() {
   return (
-    <div className="apartment_description">
+    <div className="description__panel">
       <p className="description_header">
         <span>Description </span>
         <i className="fa-solid fa-chevron-up"></i>
