@@ -3,6 +3,7 @@
 .description__panel {
   margin-bottom: 30px;
   padding: 0 45px;
+  flex-basis: 50%;
   @media screen and (max-width: 768px) {
     padding: 0;
   }

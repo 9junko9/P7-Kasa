@@ -51,6 +51,7 @@
     margin-block: 0;
   }
 }
+
 .apartment_host {
   display: flex;
   align-items: center;
@@ -69,7 +70,8 @@
     }
   }
 }
-.apartment_host_badge {
+
+.apartment_host_badge img {
   height: 64px;
   width: 64px;
   border-radius: 50%;
@@ -82,9 +84,11 @@
     width: 32px;
   }
 }
+
 .apartment_host_stars {
   display: flex;
   gap: 5px;
+  color: $stars;
   @media screen and (max-width: 768px) {
     order: -1;
   }
@@ -97,7 +101,15 @@
   .on {
     color: $color-primary;
   }
-  .off {
-    color: $stars;
-  }
+}
+
+.host-name {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.first-name,
+.last-name {
+  display: block;
 }
