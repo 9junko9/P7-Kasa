@@ -1,7 +1,8 @@
 import "./ApartmentPage.scss";
-import { DescriptionPanel } from "../Components/DescriptionPanel";
+
 import ApartmentBanner from "../Components/ApartmentBanner";
 import ApartmentHeader from "../Components/ApartmentHeader";
+import { DescriptionPanel } from "../Components/DescriptionPanel";
 
 function ApartmentPage() {
   return (

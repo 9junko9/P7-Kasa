@@ -1,14 +1,24 @@
+import { useEffect, useState } from "react";
 import "../Components/Thumb.scss";
-import ApartmentCard from "./Apartment";
+import ApartmentCard from "./ApartmentCard";
 
 function Thumb() {
+  const [apartments, setApartments] = useState([]);
+
+  useEffect(fetchApartments, []);
+
+  function fetchApartments() {
+    fetch("locations.json")
+      .then((res) => res.json())
+      .then((res) => setApartments(res))
+      .catch(console.error);
+  }
   return (
     <div className="ThumbContainer">
       <div className="ThumbGrid">
-        <ApartmentCard />
-        <ApartmentCard />
-        <ApartmentCard />
-        <ApartmentCard />
+        {apartments.map((apartment) => (
+          <ApartmentCard title={apartment.title} imageUrl={apartment.cover} />
+        ))}
       </div>
     </div>
   );
