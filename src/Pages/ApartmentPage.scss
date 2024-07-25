@@ -24,6 +24,7 @@
 .apartment__description__area {
   display: flex;
   gap: 76px;
+  overflow: hidden;
   li {
     list-style: none;
   }
