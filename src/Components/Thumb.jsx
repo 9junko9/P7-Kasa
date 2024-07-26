@@ -4,15 +4,24 @@ import ApartmentCard from "./ApartmentCard";
 
 function Thumb() {
   const [apartments, setApartments] = useState([]);
+  const [error, setError] = useState(null);
 
-  useEffect(fetchApartments, []);
+  useEffect(() => {
+    fetchApartments();
+  }, []);
 
   function fetchApartments() {
     fetch("locations.json")
       .then((res) => res.json())
       .then((res) => setApartments(res))
-      .catch(console.error);
+      .catch((error) => {
+        console.error(error);
+        setError("Unable to fetch apartments.");
+      });
   }
+
+  if (error) return <div>Error: {error}</div>;
+
   return (
     <div className="ThumbContainer">
       <div className="ThumbGrid">

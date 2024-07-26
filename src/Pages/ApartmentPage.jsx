@@ -1,16 +1,19 @@
 import "./ApartmentPage.scss";
-
 import ApartmentBanner from "../Components/ApartmentBanner";
 import ApartmentHeader from "../Components/ApartmentHeader";
 import { DescriptionPanel } from "../Components/DescriptionPanel";
-import { useLocation } from "react-router-dom";
+import { useLocation, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function ApartmentPage() {
   const location = useLocation();
+  const navigate = useNavigate();
   const [flat, setFlat] = useState(null);
 
-  useEffect(fetchApartmentData, []);
+  useEffect(() => {
+    fetchApartmentData();
+  }, []);
+
   function fetchApartmentData() {
     fetch("locations.json")
       .then((res) => res.json())
@@ -18,10 +21,18 @@ function ApartmentPage() {
         const flat = flats.find(
           (flat) => flat.id === location.state.apartmentId
         );
-        setFlat(flat);
+        if (flat) {
+          setFlat(flat);
+        } else {
+          navigate("/error"); // Redirection vers la page d'erreur
+        }
       })
-      .catch(console.error);
+      .catch((error) => {
+        console.error(error);
+        navigate("/error"); // Redirection en cas d'erreur de fetch
+      });
   }
+
   if (flat == null) return <div>Loading...</div>;
 
   return (
