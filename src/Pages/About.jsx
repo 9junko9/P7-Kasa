@@ -1,18 +1,17 @@
-import { DescriptionPanel } from "../Components/DescriptionPanel";
+import React from "react";
 import bannerAbout from "../assets/Images/imageapropos.png";
-
+import Banner from "../layout/Banner";
+import { DescriptionPanel } from "../Components/DescriptionPanel";
 import "./About.scss";
 
 function About() {
   return (
     <>
-      <div className="banner__about">
-        <img
-          src={bannerAbout}
-          alt="paysage de montagne"
-          className="banner__about__image"
-        />
-      </div>
+      <Banner
+        imgSrc={bannerAbout}
+        altText="Paysage de montagne"
+        showMask={false}
+      />
       <div className="about__container">
         <DescriptionPanel
           title="Fiabilité"

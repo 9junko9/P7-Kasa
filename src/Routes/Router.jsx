@@ -9,11 +9,13 @@ import ErrorPageNotFound from "../Pages/ErrorPage";
 
 const HeaderFooterLayout = () => {
   return (
-    <>
+    <div className="page-wrapper">
       <Navbar />
-      <Outlet />
+      <main className="content">
+        <Outlet />
+      </main>
       <Footer />
-    </>
+    </div>
   );
 };
 export const router = createBrowserRouter([
