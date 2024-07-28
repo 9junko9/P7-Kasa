@@ -26,15 +26,15 @@
   font-size: 24px;
   font-style: normal;
   font-weight: 500;
-  line-height: 142.6%; /* 34.224px */
+  line-height: 142.6%;
 
   @media screen and (max-width: 768px) {
     font-size: 14px;
-    width: 100%; /* Adapte la largeur du texte */
+    width: 100%;
   }
 }
 
 .footer_logo {
-  margin: 0; /* Retire les marges autour du logo */
-  height: auto; /* Ajuste la hauteur en fonction de l'image */
+  margin: 0;
+  height: auto;
 }

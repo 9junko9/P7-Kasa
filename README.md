@@ -1,4 +1,6 @@
-# React + Vite
+# Projet 7 Kasa OpenClassrooms / React + Vite
+
+Pour lancer le projet : "npm install" puis "npm run dev"
 
 This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
 

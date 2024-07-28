@@ -22,7 +22,7 @@ const HeaderFooterLayout = () => {
 export const router = createBrowserRouter([
   {
     element: <HeaderFooterLayout />,
-    errorElement: <ErrorPageNotFound />, // Handle errors at the top level
+    errorElement: <ErrorPageNotFound />,
     children: [
       {
         path: "/",
@@ -36,7 +36,6 @@ export const router = createBrowserRouter([
         path: "/about",
         element: <About />,
       },
-      // Remove the separate /error route
     ],
   },
 ]);
