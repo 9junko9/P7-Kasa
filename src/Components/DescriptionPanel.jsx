@@ -21,7 +21,7 @@ export function DescriptionPanel(props) {
         <span>{props.title}</span>
         <i className={chevronClass}></i>
       </p>
-      <p className={contentClass}>{props.content}</p>
+      <div className={contentClass}>{props.content}</div>
     </div>
   );
 }

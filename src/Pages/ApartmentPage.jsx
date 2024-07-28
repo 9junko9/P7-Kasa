@@ -2,34 +2,32 @@ import "./ApartmentPage.scss";
 import ApartmentBanner from "../Components/ApartmentBanner";
 import ApartmentHeader from "../Components/ApartmentHeader";
 import { DescriptionPanel } from "../Components/DescriptionPanel";
-import { useLocation, useNavigate } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useEffect, useState } from "react";
 
 function ApartmentPage() {
-  const location = useLocation();
+  const { apartmentId } = useParams();
   const navigate = useNavigate();
   const [flat, setFlat] = useState(null);
 
   useEffect(() => {
     fetchApartmentData();
-  }, []);
+  }, [apartmentId]);
 
   function fetchApartmentData() {
-    fetch("locations.json")
+    fetch("/locations.json")
       .then((res) => res.json())
       .then((flats) => {
-        const flat = flats.find(
-          (flat) => flat.id === location.state.apartmentId
-        );
+        const flat = flats.find((flat) => flat.id === apartmentId);
         if (flat) {
           setFlat(flat);
         } else {
-          navigate("/error"); // Redirection vers la page d'erreur
+          navigate("/error");
         }
       })
       .catch((error) => {
         console.error(error);
-        navigate("/error"); // Redirection en cas d'erreur de fetch
+        navigate("/error");
       });
   }
 
@@ -43,9 +41,13 @@ function ApartmentPage() {
         <DescriptionPanel title="Description" content={flat.description} />
         <DescriptionPanel
           title="Equipements"
-          content={flat.equipments.map((eq, i) => (
-            <li key={i}>{eq}</li>
-          ))}
+          content={
+            <ul>
+              {flat.equipments.map((eq, i) => (
+                <li key={i}>{eq}</li>
+              ))}
+            </ul>
+          }
         />
       </div>
     </div>

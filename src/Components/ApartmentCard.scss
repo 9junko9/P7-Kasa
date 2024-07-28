@@ -46,5 +46,6 @@
 @media screen and (max-width: 768px) {
   .apartment {
     flex-basis: 100%;
+    min-height: 255px;
   }
 }

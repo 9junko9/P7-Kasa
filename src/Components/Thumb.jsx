@@ -1,24 +1,11 @@
-import { useEffect, useState } from "react";
-import "../Components/Thumb.scss";
+// src/components/Thumb.jsx
+import React from "react";
+import useFetchApartments from "../hooks/useFetchApartments";
+import "./Thumb.scss";
 import ApartmentCard from "./ApartmentCard";
 
 function Thumb() {
-  const [apartments, setApartments] = useState([]);
-  const [error, setError] = useState(null);
-
-  useEffect(() => {
-    fetchApartments();
-  }, []);
-
-  function fetchApartments() {
-    fetch("locations.json")
-      .then((res) => res.json())
-      .then((res) => setApartments(res))
-      .catch((error) => {
-        console.error(error);
-        setError("Unable to fetch apartments.");
-      });
-  }
+  const { apartments, error } = useFetchApartments();
 
   if (error) return <div>Error: {error}</div>;
 

@@ -15,19 +15,23 @@ function About() {
       <div className="about__container">
         <DescriptionPanel
           title="Fiabilité"
-          content="à remplir avec les bonnes informations"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.
+"
         />
         <DescriptionPanel
           title="Respect"
-          content="à remplir avec les bonnes informations"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.
+"
         />
         <DescriptionPanel
           title="Service"
-          content="à remplir avec les bonnes informations"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.
+"
         />
         <DescriptionPanel
           title="Sécurité"
-          content="à remplir avec les bonnes informations"
+          content="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Quisque nisl eros, pulvinar facilisis justo mollis, auctor consequat urna. Morbi a bibendum metus.
+"
         />
       </div>
     </>
